@@ -1,0 +1,335 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2026 Heidy Kengne
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+ \newgeometry{left=1cm,right=1cm,top=0.7cm,bottom=0cm}
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{0pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Heidy Giraud Kengne} \\[1.5pt]
+\href{https://github.com/heinkek-99}{\raisebox{-0.05\height}\faGithub\ Heinkek-99} \ $|$ \ 
+\href{https://www.linkedin.com/in/heidy-kengne/}{\raisebox{-0.05\height}\faLinkedin\ heidy-kengne} \ $|$ \ 
+\href{mailto:kengneheidys@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ kengneheidy@gmail.com} \ $|$ \ 
+\href{tel:+33759203089}{\raisebox{-0.05\height}\faMobile \ +33759203089} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+% \section{Summary}
+% This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+
+
+%----------------------------------------------------------------------------------------
+% SECTIONS EXPÉRIENCE
+%----------------------------------------------------------------------------------------
+
+%Centres d'intérêt/ Mots-clés/ Résumé
+\section{À propos de moi}
+
+Je suis un \textbf{développeur logiciel} avec un diplôme en \textbf{informatique}, travaillant principalement en tant que \textbf{développeur web FullStack} sur des projets axés sur l'\textbf{automatisation des processus métier}.
+
+J'ai participé à l'ensemble du cycle de développement de systèmes web, de la planification à la livraison, en mettant toujours l'accent sur un code propre, des solutions efficaces et des améliorations concrètes des processus.
+
+J'ai réussi à \textbf{identifier et résoudre des problèmes structurels} dans les systèmes sur lesquels j'ai travaillé en proposant et en mettant en œuvre de \textbf{nouvelles technologies et solutions architecturales} qui ont amélioré la fiabilité, la sécurité et la maintenabilité.
+
+
+
+%Experience
+\section{Experiences }
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Fricentric} & \hfill Oct 2024 - Nov 2025 \\[3pt]
+\textbf{Developpeur logiciel} & \hfill India, Remote \\[2pt] 
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0.5pt]
+        \item[--] Conception et développement de microservices efficaces, augmentant l'engagement des utilisateurs de \textbf{25\%} grâce à des fonctionnalités interactives.
+        \item[--] Optimisation des applications principales, réduisant les temps de réponse de \textbf{30\%} et améliorant la fiabilité globale du système.
+        \item[--] Accompagnement des développeurs, résolution des problèmes, fourniture de commentaires détaillés, évaluation des fonctionnalités afin d'améliorer les résultats.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\vspace{-5pt} % Adjust this value to decrease or increase the gap
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Face aux risques SA} & \hfill Feb 2024 - Jul 2024 \\[3pt]
+\textbf{Ingénieur DevOps} & \hfill Vannes, France \\[2pt] 
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0.5pt]
+
+        \item[--] Modernisation de l’infrastructure IT et déploiement d’outils métiers adaptés aux
+        besoins opérationnels.
+        \item[--] Mise en place d’un LAN performant, d’un Active Directory centralisé et d’une
+        virtualisation applicative.
+        \item[--] Mise en place d’une ERP assurant interopérabilité et sécurité des échanges de données entre systèmes hétérogènes.
+        \item[--] Administration réseaux et serveurs, optimisation des processus et renforcement de la   sécurité.
+
+
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\vspace{-20pt} % Adjust this value to decrease or increase the gap
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Societe General} & \hfill Juin 2023 - Jan 2024 \\[3pt]
+\textbf{Developeur Full Stack junior} & \hfill Vannes, Remote \\[2pt] 
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0.5pt]
+
+         \item[--] Optimisation des applications full stack avec React, Node.js et MongoDB, réduisant considérablement les temps de chargement de \textbf{40\%}.
+         \item[--] Conception de microservices évolutifs, augmentant considérablement l'engagement des utilisateurs de \textbf{25\%} grâce à des fonctionnalités interactives.
+         \item[--] Intégration transparente de diverses API, résolvant les goulots d'étranglement critiques et améliorant la satisfaction des utilisateurs
+
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\vspace{-20pt} % Adjust this value to decrease or increase the gap
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Orange} & \hfill Sept. 2022 - Fév. 2023 \\[3pt]
+\textbf{Developpeur .NET / React} & \hfill Douala, Cameroun \\[2pt] 
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=0.5pt]
+        \item[--]Piloté développement full-stack d’application web en architecture microservices avec pattern CQRS.
+        \item[--] Orchestré mise en œuvre CI/CD sur Azure DevOps avec tests automatisés et code review systématiques.
+        \item[--]  Conçu API RESTful .NET Core avec Entity Framework, documentées Swagger.
+        \item[--]   Animé rituels agiles (daily, sprint) et coordonné équipes techniques. \\
+        \textit{\small Stack : .NET 6, C\#, React.js, Redux, TypeScript, SQL Server, Azure DevOps, Docker, CQRS, Swagger}
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\vspace{3pt} % Adjust this value to decrease or increase the gap
+
+%Projects
+
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{SmartBuilding} \\
+% & \hfill \href{https://psssshms.vercel.app/}{Link to Demo} \\[6pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=4pt]
+        \item[--] Conception d’une architecture DevOps end-to-end pour connecter capteurs et services, avec authentification via serveur Java et supervision centralisée.
+        \item[--] Mise en place d’un pipeline d’événements pour synchroniser en temps réel les données entre services Java et C\#, garantissant fiabilité et scalabilité du parc IoT.
+        \item[--] Développement d’un portail web et d’une application mobile pour piloter et visualiser le parc IoT.
+    \end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\vspace{3pt} % Adjust this value to decrease or increase the gap
+
+\section{Formation}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+% 2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+
+2019 - 2024 &  {Diplôme d'Ingénieur en Informatique (Bac+5)} \hfill \textbf{ Icam, Vannes } \\
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%  Languages
+%----------------------------------------------------------------------------------------
+\section{Langues}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Anglais} & \hfill TOEIC: 820/990 \\
+% \textbf{Basic German} & \hfill  Deutsche Welle Online Course \\  
+\textbf{Francais}  & \hfill Natif
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+% \section{Publications}
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+% \section{Skills}
+% \begin{tabularx}{\linewidth}{@{}l X@{}}
+% Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
+% Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+% \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Compétences}
+\vspace{5pt}
+Compétences principales : HTML, CSS, JavaScript, React, Angular, TypeScript, Node.js, Express, SQL, MongoDB, API RESTful, Git/GitHub, .NET Core (C\#, Entity Framework), Python, React.js, Docker, TypeScript, Cloud (Azure, AWS), Spring Boot, CI/CD.\\
+Compétences secondaires : Python, Analyse de données, frameworks d'IA et d'apprentissage automatique (TensorFlow, PyTorch, Hugging Face Transformers), traitement du langage naturel (NLP) et développement de chatbots, méthodogie Agile (Scrum), Connaissance en système réseaux.
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+% \section{Awards}
+%     % \begin{tabularx}{\linewidth}{@{}X@{}}
+%     % \begin{itemize}[nosep, leftmargin=*]
+%     %     \item 1st place in "CODE WITH GEAR" by Centre of Excellence,NextGen Cloud Club,and Microsoft Chapter
+%     %     \item Won 1st prize in "24-HOUR HACKQUEST" for innovative solutions in a competitive COE IoT event
+%     %     \item Recognized among the Top Ten for outstanding performance in all Engineering Clinics Group Projects
+%     %     \item Won 3rd prize in "24-Hr Web App Hackathon", demonstrating problem-solving and teamwork skills
+%     % \end{itemize}
+%     % \end{tabularx}
+    
+%     \begin{tabularx}{\linewidth}{ @{}l r@{} }
+%     \multicolumn{2}{@{}X@{}}{
+%     \begin{minipage}[t]{\linewidth}
+%         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=4pt]
+%             \item[--]  1st place in "CODE WITH GEAR" by Centre of Excellence,NextGen Cloud Club,and Microsoft Chapter
+%             \item[--]  Won 1st prize in "24-HOUR HACKQUEST" for innovative solutions in a competitive COE IoT event
+%             \item[--]  Recognized among the Top Ten for outstanding performance in all Engineering Clinics Group Projects
+%             \item[--]  Secured 3rd place in a 24-hour Web App Hackathon by leading a team of four, showcasing exceptional problem-solving and teamwork skills, and developing a functional prototype that impressed judges.
+          
+%         \end{itemize}
+%     \end{minipage}
+%     }
+% \end{tabularx}
+
+
+\end{document}
+
+
+\end{document}
+
+
+
+\end{document}
+
+% \vfill
+% \center{\footnotesize Last updated: \today}
+
+\end{document}
